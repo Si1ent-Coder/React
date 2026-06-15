@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height:100vh;
+    font-family: "Poppins",sans-serif;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.title{
+    font-size: 3rem;
+    margin:6vh;
+    border: 7px dashed rgb(1,17,160);
+    border-radius: 20px;
+    padding: 1vh 5vw;
+}
+
+
+.cards{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card{
+    width: 400px;
+    height: max-content;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.image{
+    width: 380px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+
+.tour-info{
+    margin:20px 5px;
+    text-align: left;
+}
+
+.tour-name{
+ font-size: 1.3rem;
+}
+
+.tour-price{
+color: #1faa59;
+font-size: 1.3rem;
+}
+
+.read-more{
+    color:#12b0e8;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.btn-red{
+    background-color: #b4161b21;
+    font-size: 18px;
+    border: 1px solid #b4161b;
+    margin-top: 18px;
+    padding: 10px 80px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.btn-red:hover{
+    background-color: red;
+    color:white;
+    transition: all 0.2s;
+}
+
+.refresh{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.refresh h1{
+    font-size: 1.2rem;
+}
+.btn-white{
+    font-size: 18px;
+    border: 1px solid black;
+    margin-top: 18px;
+    padding: 10px 80px;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: grey;  
+}
