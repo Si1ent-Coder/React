@@ -1,16 +1,17 @@
 import React from 'react';
 
 
-function Filter({filterData}){
+const Filter = ({filterData}) => {
     return (
         <div>
             {filterData.map((data)=>{
-                <button>
-                    {data.title};
-                </button>
+                return(<button key={data.id}>
+                    {data.title}
+                </button>)
             })}
         </div>
     )
 }
+
 
 export default Filter;

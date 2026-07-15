@@ -10,7 +10,7 @@ const Cards = (props) =>{
 
 
     function getCourses(){
-        if(category==="All"){
+        if(category=="All"){
         let allCourses = []; 
         Object.values(courses).forEach(array =>{
             array.forEach(courseData =>{

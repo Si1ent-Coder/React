@@ -1,25 +1,47 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css';
-// import Navbar from './Navbar.jsx';
-// import Filter from './Filter.jsx';
-// import Cards from './Cards.jsx';
+import Navbar from './components/Navbar.jsx';
+import Filter from './components/Filter.jsx';
+import Cards from './components/Cards.jsx';
 
-
+import React from 'react';
 
 
 import { apiUrl,filterData } from './data.jsx';
 
-function App() {
+const App = () => {
+
+  const[ courses,setCourses] = useState({});
+
+
+  useEffect( () =>{
+
+    const fetchData = async() =>{
+
+      try{
+        const res = await fetch(apiUrl);
+        const output = await res.json();
+        // save data into a variable
+        setCourses(output.data);
+      }
+      catch(error){
+        toast.error("Something went wrong");
+      }
+    }
+    fetchData();
+  },[]);
+
+
   return(
     <div>
     <Navbar/>
 
     <Filter filterData={filterData}/>
 
-    <Cards/>
+    <Cards courses={courses}/>
 
     </div>
   );

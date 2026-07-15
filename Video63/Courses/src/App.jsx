@@ -24,7 +24,7 @@ const App = () =>{
       let response = await fetch(apiUrl);
       let output = await response.json();
       //output ->
-      console.log(output);
+      // console.log(output);
       setCourses(output.data);
     }
     catch(error){
@@ -38,7 +38,7 @@ const App = () =>{
   },[]);
   
   return(
-    <div className='min-h-screen flex flex-col'>
+    <div className='min-h-screen flex flex-col bg-gray-800'>
 
 
       <div>
