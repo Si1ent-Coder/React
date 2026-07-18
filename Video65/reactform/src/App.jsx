@@ -42,7 +42,7 @@ const App =()=>{
     // 
     console.log("Finaly printing the form data..........");
     console.log(formData);
-
+ 
   }
 
 console.log(formData);
