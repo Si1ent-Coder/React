@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/Logo.svg";
 import { Link } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 const Navbar=(props)=>{
     let isLoggedIn = props.isLoggedIn;
@@ -32,13 +33,19 @@ const Navbar=(props)=>{
                     <Link to="/login"> <button >Login</button> </Link>
                 }
                 { !isLoggedIn &&
-                    <Link to="/signup"> <button >Sign up</button> </Link>
+                    <Link to="/signup"> <button onClick={()=>{
+                        setIsLoggedIn(true);
+                        toast.success("signup");
+                    }}>Sign up</button> </Link>
                 }
                 { isLoggedIn &&
                     <Link to="/dashboard" > <button>Dashboard</button> </Link>
                 }
                 { isLoggedIn &&
-                    <Link to="/"> <button>Log out</button> </Link>
+                    <Link to="/"> <button onClick={()=>{
+                        setIsLoggedIn(false);
+                        toast.success("logged out");
+                    }}>Log out</button> </Link>
                 }
             </div>
 
