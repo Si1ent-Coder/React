@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@theme {
+  /* Rich Black */
+  --color-richblack-900: #000814;
+  --color-richblack-800: #161D29;
+  --color-richblack-700: #2C333F;
+  --color-richblack-600: #424854;
+  --color-richblack-500: #585D69;
+  --color-richblack-400: #6E727D;
+  --color-richblack-300: #838894;
+  --color-richblack-200: #999DA8;
+  --color-richblack-100: #AFB2BF;
+  --color-richblack-50:  #F1F2FF;
+}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Dashboard=()=>{
     return(
-        <div className="flex items-center justify-center h-screen">
+        <div className="flex items-center justify-center h-screen text-3xl text-white">
             <div>
             <h1>Welocome to StudyNotion</h1>
             </div>
